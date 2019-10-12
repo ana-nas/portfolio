@@ -65,7 +65,7 @@ export default {
   padding-top: 20vh;
 }
 .tab {
-  color: $c-dark;
+  color:#999999;
   cursor: pointer;
   margin-right: 5rem;
 }
@@ -102,7 +102,6 @@ export default {
 	display: block;
 }
 .active {
-	color: $c-accent;
   font-weight: bold;
 }
 </style>
