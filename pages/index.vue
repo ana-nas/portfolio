@@ -58,24 +58,18 @@
       </Tabs>
     </section>
     <section class=footer>
-      <div class=grid-grid-footer>
-        <div class=contacts>
-          <p>I like to try new things and meet new people,
-            so drop me an email or say hi on Telegram.
-          </p>
-        </div>
-        <div class="social">
-          <div class=grid-grid-social>
-            <div class=empty>
-            </div>
-            <ul class="list">
-              <li><a href="#"><img src="~/assets/img/facebook.svg" alt="facebook"></a></li>
-              <li><a href="#"><img src="~/assets/img/instagram.svg" alt="instagram"></a></li>
-              <li><a href="#"><img src="~/assets/img/linkedin.svg" alt="linkedin"></a></li>
-              <li><a href="#"><img src="~/assets/img/behance.svg" alt="behance"></a></li>
-            </ul>
-          </div>
-        </div>
+      <div class=contacts>
+        <p>I like to try new things and meet new people,
+          so drop me an email or say hi on Telegram.
+        </p>
+      </div>
+      <div class="social">
+          <ul class="list">
+            <li><a href="#"><img src="~/assets/img/facebook.svg" alt="facebook"></a></li>
+            <li><a href="#"><img src="~/assets/img/instagram.svg" alt="instagram"></a></li>
+            <li><a href="#"><img src="~/assets/img/linkedin.svg" alt="linkedin"></a></li>
+            <li><a href="#"><img src="~/assets/img/behance.svg" alt="behance"></a></li>
+          </ul>
       </div>
     </section>
   </div>
@@ -118,7 +112,7 @@ export default {
       display: grid;
       grid-template-areas: "empty list";
       grid-template-columns: 4fr 4fr;
-      background-color: #1C1C1C;
+      background-color: $c-bg;
   }
 }
 
@@ -129,6 +123,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  padding: 0 4rem;
   padding-top: 20vh;
   &-text,
   &-social {
@@ -173,13 +168,15 @@ export default {
 
 .footer {
   grid-area: footer;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
   border-top: 2px solid #fff;
+  padding:0 4rem;
   position: relative;
-  padding: 3rem 0 0 0;
   color: #fff;
 
   .contacts {
-    padding-left: 4rem;
   }
   .list {
     padding-right: 4rem;
