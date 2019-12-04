@@ -17,6 +17,10 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css: [
+    './assets/css/global.css',
+    './assets/css/variables.scss',
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -25,6 +29,10 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    styleResources: {
+      scss: './assets/css/variables.scss',
+    },
+
     /*
     ** Run ESLint on save
     */
