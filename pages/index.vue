@@ -19,7 +19,7 @@
           </p>
           <div class="projects">
             <ul class="list">
-              <li><a href="https://www.ozon.ru/"> Ozon Invest </a></li>
+              <li><a href="https://www.invest.ozon.ru/"> Ozon Invest </a></li>
               <li><a href="https://www.ozon.ru/"> Credit services </a></li>
               <li><a href="https://www.ozon.ru/"> Ozon Card </a></li>
               <li><a href="https://www.ozon.ru/"> Infographics </a></li>
