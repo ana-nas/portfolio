@@ -1,21 +1,22 @@
 h1 {
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 48px;
+  font-family: 'Gotham Pro', sans-serif;
+  font-size: 56px;
 }
 
 h2{
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 16px;
+  font-family: 'Gotham pro', sans-serif;
+  font-size: 40px;
+  line-height: 1.1em;
   font-weight: 700;
 }
 p {
-  font-family: 'Noto Sans HK', sans-serif;
-  line-height: 1.45em;
+  font-family: 'Gotham pro', sans-serif;
+  line-height: 1.50em;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 400;
 }
 
 a {
   text-decoration: underline;
-  color: #fff;
+  color: #162C83;
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
-    <title>facebook</title>
+<svg width="9px" height="15px" viewBox="0 0 9 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Path</title>
     <desc>Created with Sketch.</desc>
-    <g id="facebook" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="facebook-copy" transform="translate(11.000000, 6.000000)" fill="#FFFFFF">
-            <path d="M11,0 L8,0 C5.23857625,0 3,2.23857625 3,5 L3,8 L0,8 L0,12 L3,12 L3,20 L7,20 L7,12 L10,12 L11,8 L7,8 L7,5 C7,4.44771525 7.44771525,4 8,4 L11,4 L11,0 Z" id="Path"></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ana-Copy" transform="translate(-1351.000000, -37.000000)" fill="#7E7C88">
+            <path d="M1359.75,37 L1357.5,37 C1355.42893,37 1353.75,38.6789322 1353.75,40.75 L1353.75,43 L1351.5,43 L1351.5,46 L1353.75,46 L1353.75,52 L1356.75,52 L1356.75,46 L1359,46 L1359.75,43 L1356.75,43 L1356.75,40.75 C1356.75,40.3357864 1357.08579,40 1357.5,40 L1359.75,40 L1359.75,37 Z" id="Path"></path>
         </g>
     </g>
 </svg>
