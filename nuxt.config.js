@@ -20,6 +20,7 @@ module.exports = {
   css: [
     './assets/css/global.css',
     './assets/css/variables.scss',
+    './assets/css/media.scss'
   ],
   /*
   ** Customize the progress bar color
@@ -30,7 +31,7 @@ module.exports = {
   */
   build: {
     styleResources: {
-      scss: './assets/css/variables.scss',
+      scss: './assets/css/main.scss',
     },
 
     /*
