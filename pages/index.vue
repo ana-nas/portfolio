@@ -1,6 +1,14 @@
 <template>
   <div class="grid">
     <section class="about">
+      <div class=social>
+        <ul class="social_list">
+            <li><a href="#"><img src="~/assets/img/behance.svg" alt="behance"></a></li>
+            <li><a href="#"><img src="~/assets/img/linkedin.svg" alt="linkedin"></a></li>
+            <li><a href="#"><img src="~/assets/img/facebook.svg" alt="facebook"></a></li>
+            <li><a href="#"><img src="~/assets/img/instagram.svg" alt="instagram"></a></li>
+         </ul>
+      </div>
       <div class="vertical_text">
         <p> Ana Konovalova
         </p>
@@ -11,8 +19,9 @@
         </h2>
         <div class="description">
           <p>
-          Currently work at <a href="https://www.ozon.ru/">Ozon</a> (Moscow, Russia).
+          Currently work at <a class="about-link" href="https://www.ozon.ru/">Ozon</a> (Moscow, Russia).
           Mostly developing financial services inside the e-commerce product.
+		  I strive to create lasting connections with people through meaningful design.
           Passionate about creating senses in my life, so you can read my principles of work.
           I like to try new things and meet new people, so drop me
           an email or say hi on Telegram.
@@ -29,18 +38,9 @@
 			</div>
 	  </section>
     <section class="photo">
-      <div class=social>
-        <ul class="social_list">
-            <li><a href="#"><img src="~/assets/img/behance.svg" alt="behance"></a></li>
-            <li><a href="#"><img src="~/assets/img/linkedin.svg" alt="linkedin"></a></li>
-            <li><a href="#"><img src="~/assets/img/facebook.svg" alt="facebook"></a></li>
-            <li><a href="#"><img src="~/assets/img/instagram.svg" alt="instagram"></a></li>
-
-
-          </ul>
-      </div>
-      <div class=bg>
-        <a href="#"><img src="~/assets/img/rectangle.png"></a>
+      <div class="pic-wrapper">
+        <div />
+        <img src="~/assets/img/ana_konovalova.png">
       </div>
     </section>
   </div>
@@ -63,6 +63,9 @@
     left: 10px;
     color: #CD0242;
     font-family: Inconsolata;
+    @include md{
+      transform:rotate(0deg);
+    }
   }
 }
 
@@ -74,6 +77,31 @@
   flex-direction: column;
   padding: 0 4rem;
   padding-top: 10vh;
+
+  .social{
+    position: absolute;
+    right:4rem;
+    top: 1rem;
+    .social_list{
+      padding-top: 3rem;
+      padding-left: 20rem;
+      padding-bottom: 3rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      li {
+      list-style-type: none;
+      display: inline-block;
+      margin-left: 2rem;
+      }
+    }
+  }
+
+  .about-link{
+	  color:#02090F;
+    text-decoration: none;
+    border-bottom: 2px solid #162C83;
+  }
 
   .title {
     color: #162C83;
@@ -107,25 +135,25 @@
   }
 }
 .photo{
-  .bg {
+  padding-top: 8rem;
+  @include lg {
+    display: none;
+  }
+
+  .pic-wrapper {
+    position: relative;
+    div {
+      min-width: 574px;
+      height: 506px;
+      background-color: #EBEEF2;
+    }
+
     img{
       grid-area: photo;
-      height: 100%;
-    }
-  }
-  .social{
-    .social_list{
-      padding-top: 3rem;
-      padding-left: 20rem;
-      padding-right: 4rem;
-      padding-bottom: 3rem;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      li {
-      list-style-type: none;
-      display: inline-block;
-      }
+      max-width: 279px;
+      position: absolute;
+      right: 4rem;
+      bottom: -2rem;
     }
   }
 }

@@ -1,3 +1,28 @@
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('/fonts/GothamProBlack.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('/fonts/GothamProRegular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('/fonts/Inconsolata-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-display: swap;
+}
+
 h1 {
   font-family: 'Gotham Pro', sans-serif;
   font-size: 56px;
@@ -16,7 +41,4 @@ p {
   font-weight: 400;
 }
 
-a {
-  text-decoration: underline;
-  color: #162C83;
-}
+
