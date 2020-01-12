@@ -3,10 +3,15 @@
     <section class="about">
       <div class=social>
         <ul class="social_list">
-            <li><a href="#"><img src="~/assets/img/behance.svg" alt="behance"></a></li>
+            <!--<li><a href="#"><img src="~/assets/img/behance.svg" alt="behance"></a></li>
             <li><a href="#"><img src="~/assets/img/linkedin.svg" alt="linkedin"></a></li>
             <li><a href="#"><img src="~/assets/img/facebook.svg" alt="facebook"></a></li>
-            <li><a href="#"><img src="~/assets/img/instagram.svg" alt="instagram"></a></li>
+            <li><a href="#"><img src="~/assets/img/instagram.svg" alt="instagram"></a></li>-->
+            <li><a class="about-link-social" href="https://medium.com/@ana_nas" target="_blank"> Medium </a></li>
+            <li><a class="about-link-social" href="https://www.linkedin.com/in/anastasia-konovalova-27b001118/" target="_blank"> Linkedin </a></li>
+            <li><a class="about-link-social" href="https://www.behance.net/anakonovalova" target="_blank"> Behance </a></li>
+            <li><a class="about-link-social" href="https://www.instagram.com/cosmic_ananas" target="_blank"> Instagram </a></li>
+            <li><a class="about-link-social" href="https://www.facebook.com/betaniyaho" target="_blank"> Facebook </a></li>
          </ul>
       </div>
       <div class="vertical_text">
@@ -15,25 +20,30 @@
         </div>
     	<div class="about-text">
         <h2 class="title">
-        I’m a digital product designer with an interest in user research and development.
+        I’m a digital product designer with an interest in user psychology and development.
         </h2>
         <div class="description">
           <p>
-          Currently, I work for<a class="about-link" href="https://www.invest.ozon.ru/">Ozon Invest</a> (Moscow, Russia).
+          Currently, I work for <a class="about-link" href="https://www.invest.ozon.ru/ " target="_blank">Ozon Invest</a> (Moscow, Russia).
           which is an investment platform helping small businesses expand and I also,
-		  do developing financial services inside the e-commerce product <a class="about-link" href="https://www.ozon.ru/">Ozon.
-		  I strive to create lasting connections between the person and the product
-		  through meaningful design.
-		  I passionate about creating senses in my life, so you can read my principles of work.
+		      do developing financial services inside the e-commerce product <a class="about-link" href="https://www.ozon.ru/" target="_blank">Ozon.</a>
+		      I strive to create lasting connections between the person and the product
+		      through meaningful design.
+		      I passionate about creating senses in my life, so you can read my
+          <a class="about-link" href="https://medium.com/@ana_nas/principles-for-designing-products-25d81ab3c459" target="_blank">
+          principles of work.</a>
           I like to try new things and meet new people, so drop me
           an email or say hi on Telegram.
           </p>
           <div class="projects">
+			      <h3 class="title">
+			      	Projects
+			      </h3>
             <ul class="list">
-              <li><a href="https://www.invest.ozon.ru/"> Ozon Invest </a></li>
-              <li><a href="https://www.ozon.ru/"> Credit services </a></li>
-              <li><a href="https://www.ozon.ru/"> Ozon Card </a></li>
-              <li><a href="https://www.ozon.ru/"> Infographics </a></li>
+              <li><a class="about-link" href="https://invest.ozon.ru/investor" target="_blank"> Invest (for investors)</a></li>
+              <li><a class="about-link" href="https://www.invest.ozon.ru/" target="_blank"> Invest (for borrowers) </a></li>
+              <li><a class="about-link" href="https://www.ozon.ru/" target="_blank"> Ozon </a></li>
+              <li><a class="about-link" href="https://card.ozon.ru/" target="_blank"> Ozon Card </a></li>
            </ul>
           </div>
         </div>
@@ -60,15 +70,15 @@
 
 .vertical_text{
   p{
-    transform: rotate(-90deg);
+    //transform: rotate(-90deg);
     position: absolute;
     left: 10px;
     color: #CD0242;
     font-family: Inconsolata;
-    @include md{
-      transform:rotate(0deg);
+    padding:0 4rem;
+    //@include md{
+      //transform:rotate(0deg);
     }
-  }
 }
 
 .about {
@@ -100,9 +110,17 @@
   }
 
   .about-link{
-	  color:#02090F;
+    color:#162C83;
     text-decoration: none;
-    border-bottom: 2px solid #162C83;
+    border-bottom: 1px solid #162C83;
+  }
+
+    .about-link-social{
+    color:#8D8C90;
+    text-decoration: none;
+    //border-bottom: 1px solid #162C83;
+    font-family: Inconsolata;
+
   }
 
   .title {
@@ -117,8 +135,17 @@
       margin-bottom: 1rem;
       color:#02090F;
     }
+
+    h3 {
+      padding:0;
+      padding: 0;
+      margin: 0;
+      margin-top: 4.5rem;
+
+
+    }
     .list {
-      padding-top: 7rem;
+      padding-top: 2rem;
       padding-left: 0rem;
       list-style: none;
       display: flex;
@@ -130,8 +157,8 @@
 
       a {
         text-decoration: none;
-        color: #8D8C90;
-        font-family: Inconsolata;
+        //color: #8D8C90;
+        //font-family: Inconsolata;
       }
     }
   }
