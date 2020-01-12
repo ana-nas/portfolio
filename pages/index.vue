@@ -19,10 +19,12 @@
         </h2>
         <div class="description">
           <p>
-          Currently work at <a class="about-link" href="https://www.ozon.ru/">Ozon</a> (Moscow, Russia).
-          Mostly developing financial services inside the e-commerce product.
-		  I strive to create lasting connections with people through meaningful design.
-          Passionate about creating senses in my life, so you can read my principles of work.
+          Currently, I work for<a class="about-link" href="https://www.invest.ozon.ru/">Ozon Invest</a> (Moscow, Russia).
+          which is an investment platform helping small businesses expand and I also,
+		  do developing financial services inside the e-commerce product <a class="about-link" href="https://www.ozon.ru/">Ozon.
+		  I strive to create lasting connections between the person and the product
+		  through meaningful design.
+		  I passionate about creating senses in my life, so you can read my principles of work.
           I like to try new things and meet new people, so drop me
           an email or say hi on Telegram.
           </p>
