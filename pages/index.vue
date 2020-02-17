@@ -25,70 +25,50 @@ export default {
 };
 </script>
 <template>
-    <div class="content">
-        <div class="row wrapper">
-            <div class="col-12 col-md-6 col-lg-7 col-xl-8 spread">
-				<div class="row">
-					<div class="col">
-						 <h1 class="name">Ana Konovalova</h1>
-					</div>
+   <div class="row wrapper">
+		<div class="col-12 col-md-6 col-lg-7 col-xl-8 spread">
+			<div class="row">
+				<div class="col">
+					<h2 class="title spacing">
+						I&rsquo;m a&nbsp;digital product designer<span class="d-inline d-lg-none d-xl-inline"> with an&nbsp;interest in&nbsp;user research and development</span>.
+					</h2>
+					<p class="description">
+						Currently I&nbsp;work&nbsp;at&nbsp;<a target="_blank" class="link" href="#">Ozon</a> (Moscow, Russia).
+						Mostly developing financial services inside the&nbsp;e-commerce corporation.
+						I&nbsp;try to&nbsp;create senses in&nbsp;my&nbsp;life, so&nbsp;you can read&nbsp;my&nbsp;<a target="_blank" class="link" href="#">principles of work</a>.
+						I&nbsp;like to&nbsp;try new things and meet new people, so&nbsp;drop me&nbsp;an&nbsp;email or&nbsp;say hi&nbsp;on&nbsp;Telegram.
+					</p>
 				</div>
-                <div class="row">
-                    <div class="col">
-                        <h2 class="title spacing">
-                           I&rsquo;m a&nbsp;digital product designer with an&nbsp;interest in&nbsp;user research and development.
-                        </h2>
-                        <p class="description">
-                            Currently I&nbsp;work&nbsp;at&nbsp;<a target="_blank" class="link" href="#">Ozon</a> (Moscow, Russia).
-                            Mostly developing financial services inside the&nbsp;e-commerce corporation.
-							I&nbsp;try to&nbsp;create senses in&nbsp;my&nbsp;life, so&nbsp;you can read&nbsp;my&nbsp;<a target="_blank" class="link" href="#">principles of work</a>.
-							I&nbsp;like to&nbsp;try new things and meet new people, so&nbsp;drop me&nbsp;an&nbsp;email or&nbsp;say hi&nbsp;on&nbsp;Telegram.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <ul class="footer">
-                            <li v-for="(item, i) in footerLinks" :key="i">
-                                <a
-                                    class="footer__link"
-                                    :href="item.link"
-                                    target="_blank"
-                                >{{ item.title }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<ul class="footer">
+						<li v-for="(item, i) in footerLinks" :key="i">
+							<a
+								class="footer__link"
+								:href="item.link"
+								target="_blank"
+							>{{ item.title }}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <style lang="scss" scoped>
-.content {
-	color: $c-text;
-	font-weight: $regular;
-	position: relative;
-    width: 100%;
-	height: 100%;
-
-	padding: 56px 80px;
-}
 
 .spread {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-}
 
-.name {
-	color: $c-accent;
-	font-size: $size-l;
-	font-weight: $semibold;
+	padding-top: 200px;
 }
 
 .title {
-	line-height: 1.1;
+	line-height: 1.125;
 	color: $c-primary;
 	font-size: $size-xl;
 	font-weight: $bold;

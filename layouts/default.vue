@@ -1,12 +1,20 @@
 <template>
     <div class="wrapper">
-        <nuxt />
+        <div class="body">
+            <div class="row">
+                <div class="col">
+                    <h1 class="name">Ana Konovalova</h1>
+                </div>
+            </div>
+            <nuxt />
+        </div>
+
         <div class="menu">
             <ul class="menu__list">
                 <li class="menu__item">
                     <nuxt-link :to="{name: 'index'}">
                         <h5 :class="['menu__title', {'menu__title--active': $route.name === 'index'}]">About</h5>
-					</nuxt-link>
+                    </nuxt-link>
                 </li>
                 <li class="menu__item">
                     <nuxt-link :to="{name: 'p2b'}">
@@ -15,21 +23,21 @@
                     </nuxt-link>
                 </li>
                 <li class="menu__item">
-                    <nuxt-link :to="{name: 'p2b'}">
+                    <nuxt-link :to="{name: 'credit'}">
                         <h5 :class="['menu__title', {'menu__title--active': $route.name === 'credit'}]">Ozon Credit service</h5>
                         <p class="menu__subtitle">description</p>
-					</nuxt-link>
+                    </nuxt-link>
                 </li>
                 <li class="menu__item">
-                    <nuxt-link :to="{name: 'p2b'}">
+                    <nuxt-link :to="{name: 'financial'}">
                         <h5 :class="['menu__title', {'menu__title--active': $route.name === 'finance'}]">Ozon Financial service</h5>
                         <p class="menu__subtitle">description</p>
-					</nuxt-link>
+                    </nuxt-link>
                 </li>
                 <li class="menu__item">
-                    <nuxt-link :to="{name: 'p2b'}">
+                    <nuxt-link :to="{name: 'editorial'}">
                         <h5 :class="['menu__title', {'menu__title--active': $route.name === 'editorial'}]">Editorial</h5>
-					</nuxt-link>
+                    </nuxt-link>
                 </li>
             </ul>
         </div>
@@ -37,69 +45,84 @@
 </template>
 
 <style lang="scss" scoped>
+.name {
+	color: $c-accent;
+	font-size: $size-l;
+	font-weight: $semibold;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    padding: 56px 80px;
+    color: $c-text;
+    font-weight: $regular;
+}
+
 .menu {
-	min-width: 300px;
-	background-color: $c-bg;
+    min-width: 300px;
+    background-color: $c-bg;
     position: fixed;
     padding: 0;
     right: 0;
     bottom: 0;
-	top: 0;
+    top: 0;
 
-	@include xxl {
-		min-width: 500px;
-	}
+    @include xxl {
+        min-width: 500px;
+    }
 
     &__list {
         list-style-type: none;
         margin: 0;
         padding: 0;
         display: flex;
-		flex-direction: column;
-		height: 100%;
-		justify-content: space-around;
-		border-left: 2px solid $c-primary;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+        border-left: 2px solid $c-primary;
     }
 
     &__item {
-		height: 100%;
-		justify-content: center;
-		flex-direction: column;
-		border-bottom: 2px solid $c-primary;
-		padding: 56px;
+        height: 100%;
+        justify-content: center;
+        flex-direction: column;
+        border-bottom: 2px solid $c-primary;
+        padding: 56px;
 
-		&:last-child {
-			border-bottom: none;
-		}
+        &:last-child {
+            border-bottom: none;
+        }
 
-		& a {
-			text-decoration: none;
-			color: $c-primary;
-		}
+        & a {
+            text-decoration: none;
+            color: $c-primary;
+        }
     }
 
     &__title {
-		font-size: $size-l;
-		font-weight: $semibold;
+        font-size: $size-l;
+        font-weight: $semibold;
 
-		&:hover {
-			color: $c-accent;
-		}
+        &:hover {
+            color: $c-accent;
+        }
 
         &--active {
-			color: $c-accent;
+            color: $c-accent;
 
-			&:hover {
-				color: $c-primary;
-			}
+            &:hover {
+                color: $c-primary;
+            }
         }
     }
 
     &__subtitle {
-		font-family: 'Inconsolata', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-		font-size: $size-s;
-		color: $c-secondary;
-		margin-top: 12px;
+        font-family: "Inconsolata", "Segoe UI", Tahoma, Geneva, Verdana,
+            sans-serif;
+        font-size: $size-s;
+        color: $c-secondary;
+        margin-top: 12px;
     }
 }
 </style>
