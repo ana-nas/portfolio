@@ -26,7 +26,7 @@ export default {
 </script>
 <template>
    <div class="row wrapper">
-		<div class="col-12 col-md-6 col-lg-7 col-xl-8 spread">
+		<div class="col-12 col-lg-8 col-xl-8 spread">
 			<div class="row">
 				<div class="col">
 					<h2 class="title spacing">
@@ -65,6 +65,10 @@ export default {
 	justify-content: space-between;
 
 	padding-top: 200px;
+
+	@include md {
+		padding-top: 120px;
+	}
 }
 
 .title {

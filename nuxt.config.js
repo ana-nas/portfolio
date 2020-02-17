@@ -5,7 +5,7 @@ module.exports = {
 	},
 
 	head: {
-		title: "portfolio",
+		title: "Ana Konovalova | Digital Product Designer",
 
 		meta: [
 			{ charset: "utf-8" },
@@ -16,7 +16,7 @@ module.exports = {
 			{
 				hid: "description",
 				name: "description",
-				content: "Nuxt.js project"
+				content: "Ana Konovalova | Digital Product Designer"
 			}
 		],
 
@@ -25,6 +25,12 @@ module.exports = {
 	css: ["@/assets/css/grid/grid.scss", "@/assets/css/global.css"],
 
 	loading: { color: "#162c83" },
+
+	router: {
+		middleware: [
+			'menu',
+		],
+	},
 
 	modules: ["@nuxtjs/style-resources"],
 

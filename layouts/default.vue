@@ -1,16 +1,50 @@
+<script>
+/* eslint-disable max-len */
+import { mapActions, mapState } from "vuex";
+
+export default {
+    computed: {
+        ...mapState({
+            isMenuOpen: state => state.ui.isMenuOpen
+        })
+    },
+
+    methods: {
+        ...mapActions({
+            toggleMenu: "ui/toggleMenu",
+            hideMenu: "ui/hideMenu"
+        })
+    }
+};
+</script>
 <template>
     <div class="wrapper">
         <div class="body">
-            <div class="row">
+            <div class="row d-flex">
                 <div class="col">
                     <h1 class="name">Ana Konovalova</h1>
+                </div>
+                <div class="col">
+                    <p
+                        @click="toggleMenu"
+                        class="toggle"
+                    >Menu</p>
                 </div>
             </div>
             <nuxt />
         </div>
 
-        <div class="menu">
+        <div :class="['menu', {'menu--open': isMenuOpen}]">
             <ul class="menu__list">
+                <li class="menu__item">
+                    <div class="menu__toggle d-flex justify-content-between">
+                        <h1 class="name">Ana Konovalova</h1>
+                        <p
+							@click="hideMenu"
+							class="toggle"
+						>Menu</p>
+                    </div>
+                </li>
                 <li class="menu__item">
                     <nuxt-link :to="{name: 'index'}">
                         <h5 :class="['menu__title', {'menu__title--active': $route.name === 'index'}]">About</h5>
@@ -44,11 +78,17 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
-.name {
-	color: $c-accent;
-	font-size: $size-l;
-	font-weight: $semibold;
+<style lang="scss">
+.name,
+.toggle {
+    color: $c-accent;
+    font-size: $size-l;
+    font-weight: $semibold;
+}
+
+.toggle {
+    text-align: right;
+    cursor: pointer;
 }
 
 .body {
@@ -57,10 +97,14 @@
     padding: 56px 80px;
     color: $c-text;
     font-weight: $regular;
+
+    @include md {
+        padding: 56px;
+    }
 }
 
 .menu {
-    min-width: 300px;
+    width: 300px;
     background-color: $c-bg;
     position: fixed;
     padding: 0;
@@ -68,9 +112,24 @@
     bottom: 0;
     top: 0;
 
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+
     @include xxl {
-        min-width: 500px;
+        width: 500px;
     }
+
+    @include md {
+        transform: translateX(100%);
+        width: 100%;
+
+        &--open {
+            transform: translateX(0);
+        }
+	}
+
+	&__toggle {
+		width: 100%;
+	}
 
     &__list {
         list-style-type: none;
@@ -81,14 +140,33 @@
         height: 100%;
         justify-content: space-around;
         border-left: 2px solid $c-primary;
+
+        @include md {
+            border-left: none;
+        }
     }
 
     &__item {
-        height: 100%;
-        justify-content: center;
+		height: 100%;
+		display: flex;
+		justify-content: center;
         flex-direction: column;
         border-bottom: 2px solid $c-primary;
-        padding: 56px;
+		padding: 56px;
+
+		@include md {
+			padding: 0 56px;
+			text-align: center;
+			align-items: center;
+		}
+
+		&:first-child {
+			display: none;
+
+			@include md {
+				display: flex;
+			}
+		}
 
         &:last-child {
             border-bottom: none;
@@ -102,7 +180,7 @@
 
     &__title {
         font-size: $size-l;
-        font-weight: $semibold;
+		font-weight: $semibold;
 
         &:hover {
             color: $c-accent;
