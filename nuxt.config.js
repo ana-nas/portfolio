@@ -20,7 +20,7 @@ module.exports = {
 			}
 		],
 
-		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.png" }]
 	},
 	css: ["@/assets/css/grid/grid.scss", "@/assets/css/global.css"],
 
