@@ -21,10 +21,10 @@ export default {
     <div class="wrapper">
         <div class="body">
             <div class="row d-flex">
-                <div class="col">
+                <div class="col-8">
                     <h1 class="name">Ana Konovalova</h1>
                 </div>
-                <div class="col">
+                <div class="col-4">
                     <p
                         @click="toggleMenu"
                         class="toggle"
@@ -83,12 +83,17 @@ export default {
 .toggle {
     color: $c-accent;
     font-size: $size-l;
-    font-weight: $semibold;
+	font-weight: $semibold;
+
+	@include md {
+		font-size: $size-m;
+	}
 }
 
 .toggle {
     text-align: right;
-    cursor: pointer;
+	cursor: pointer;
+	color: $c-primary;
 }
 
 .body {
@@ -99,7 +104,7 @@ export default {
     font-weight: $regular;
 
     @include md {
-        padding: 56px;
+        padding: 2rem;
     }
 }
 
@@ -155,7 +160,7 @@ export default {
 		padding: 56px;
 
 		@include md {
-			padding: 0 56px;
+			padding: 0 2rem;
 			text-align: center;
 			align-items: center;
 		}

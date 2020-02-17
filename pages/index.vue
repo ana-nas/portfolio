@@ -65,8 +65,9 @@ export default {
 	justify-content: space-between;
 
 	padding-top: 200px;
+	padding-bottom: 2rem;
 
-	@include md {
+	@include sm {
 		padding-top: 120px;
 	}
 }
@@ -76,11 +77,21 @@ export default {
 	color: $c-primary;
 	font-size: $size-xl;
 	font-weight: $bold;
+
+	@include sm {
+		font-size: $size-l;
+	}
 }
 
 .description {
 	line-height: 1.4;
 	font-size: $size-m;
+	margin-bottom: 2rem;
+
+	@include sm {
+		font-size: $size-s;
+		margin-bottom: 4rem;
+	}
 }
 
 .link {
@@ -100,12 +111,25 @@ export default {
 .footer {
 	margin: 0;
 	padding: 0;
-    list-style: none;
+	list-style: none;
+
+	@include sm {
+		display: flex;
+    	justify-content: space-between;
+	}
 
     & li {
         list-style-type: none;
         display: inline-block;
 		margin-right: 2.5rem;
+
+		@include md {
+			margin-right: 1rem;
+		}
+
+		@include sm {
+			margin-right: .5rem;
+		}
 
 		&::last-child() {
 			margin-right: 0;
@@ -116,6 +140,10 @@ export default {
 		color: $c-secondary;
 		text-decoration: none;
 		font-family: "Inconsolata", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+		@include sm {
+			font-size: 14px;
+		}
     }
 }
 
