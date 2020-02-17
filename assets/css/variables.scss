@@ -1,2 +1,58 @@
 $c-light: #000;
 $c-bg: #fff;
+$c-primary: #162c83;
+$c-accent: #CD0242;
+$c-text: #06072A;
+$c-secondary: #82808C;
+
+$size-s: 16px;
+$size-m: 20px;
+$size-l: 24px;
+$size-xl: 48px;
+
+$regular: 400;
+$semibold: 500;
+$bold: 700;
+
+$sm-width: 575px;
+$md-width: 767px;
+$lg-width: 991px;
+$xl-width: 1200px;
+$xxl-width: 1375px;
+
+@mixin xs {
+	@media (max-width: #{$sm-width}) {
+	  @content;
+	}
+}
+
+@mixin sm {
+  @media (max-width: #{$md-width}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+@mixin lg {
+	@media (max-width: #{$xl-width}) {
+	  @content;
+	}
+  }
+
+@mixin xl {
+  @media (min-width: #{$xl-width + 1}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+	@media (min-width: #{$xxl-width + 1}) {
+	  @content;
+	}
+  }
+
